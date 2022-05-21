@@ -1,0 +1,24 @@
+# Configuration file for the Argoverse Motion Forecasting data parser
+
+current_timestep: 19     # Index of the current timestep (last time step that was observed)
+observed_horizon: 20     # Number of observed time steps
+prediction_horizon: 30   # Number of predicted time steps
+min_num_observations: 15 # Minimum number of observed time steps for an agent to be considered valid - The gaps are filled by a Kalman smoother
+min_num_future_observations: 29 # Minimum number of future observations to use or data augmentation - agents with at least this number of observations in the future will be used as additional targets
+
+augment: True
+min_augmented_length: 5 # Minimum length for augmented trajectories in m
+min_augmented_turn: 0.15 # Minimum turn for augmented trajectories in rad
+
+kalman_smoother:
+    process_noise_var: [0.5, 0.5, 1.0, 1.0] # Single-integrator process noise variance (x, y, x_dot, y_dot)
+    measurement_noise_var: [0.5, 0.5] # Single-integrator measurement noise variance (x, y)
+    
+centerline_search_range_min: 75.0 # Manhattan range around current agent position to look for lane centerlines
+centerline_search_range_multiplier: 3.0 # Manhattan range around current agent position to look for lane centerlines
+
+max_agents: 32
+max_centerlines: 128
+
+raw_dataset_dir: 'data/argoverse/forecasting/raw'
+parsed_dataset_dir: 'data/argoverse/forecasting/parsed-augmented-A32G128'

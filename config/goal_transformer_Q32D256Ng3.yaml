@@ -1,0 +1,48 @@
+# Configuration file for Goal Transformer
+
+# Training parameters
+lr: 1.e-4                  # Learning rate
+lr_warmup_steps: 2000      # Learning rate warmup steps
+epochs: 140                # Number of epochs
+batch_size: 16             # Batch size 128
+accumulate_grad_batches: 1 # Increases the effective batch size
+weight_decay: 1.e-4        # Weight decay
+clip_max_norm: 1.0         # Maximum norm for gradient clipping 
+conf_loss_weight: 0.01     # Balancing weight between GNLL loss and confidence loss
+mse_loss: False
+skip_gp_head: False
+
+# Model parameters
+t_hist: 20              # Number of observed time steps
+t_pred: 30              # Number of time steps to predict
+max_agents: 16          # Maximum number of agents per batch - DO NOT CHANGE
+max_centerlines: 64      # Maximum number of centerlines per batch - DO NOT CHANGE
+feature_dim: 256        # Feature dimension
+num_goals: 3            # Number of intermediate goals to predict
+nheads: 4               # Number of attention heads
+npred: 32               # Number of predictions per sequence
+dropout: 0.2            # Dropout
+sigma_obs: [0.1, 0.1, 0.1, 0.1] # Standard deviation of observations of x, y, u, v
+# train_gp: False          # Flag for training all the way through the Gaussian process
+# train_mse: False 
+# train_on_closest_pred: False # Whether to backpropagate prediction closest to ground truth or closest to cluster center
+
+# Execution parameters
+model_name: 'april_goal_transformer_P32D256W01G3_v5'
+resume: True            # Whether to resume training
+num_nodes: 2            # Number of nodes
+num_gpus: 4             # GPUs per node
+num_train_datasets: 32  # In how many datasets the training data are split when parsing
+num_val_datasets: 16    # In how many datasets the validation data are split when parsing
+num_test_datasets: 16   # In how many datasets the test data are split when parsing
+accelerator: 'gpu'      # Acceleration
+strategy: 'ddp'         # For DistributedDataParallel
+log_every_n_steps: 10   # How often to log to commet
+num_workers: 4          # For data loader
+seed: 1                 # Random number generator seed (for reproducibility)
+
+# Directories for loading/saving data and checkpoints
+dataset_dir: 'data/argoverse/forecasting/parsed-augmented-A16G64/'
+checkpoint_dir: 'data/models/'
+submission_dir: 'data/submissions/'
+
