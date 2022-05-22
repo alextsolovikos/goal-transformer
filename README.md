@@ -65,7 +65,12 @@ python main.py --config config/goal_transformer_Q32D256Ng3.yaml --train
 
 ## Model Architecture
 
-<p>
+<p 
+    position: fixed;
+    background-color: blue;
+    top: 50%;
+    left: 50%;
+>
   <img src="figures/model_sketch.png" width="600" />
 </p>
 
