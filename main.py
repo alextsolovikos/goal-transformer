@@ -25,8 +25,8 @@ def main(args, params):
 
     # Train
     comet_logger = CometLogger(
-        api_key="elKblUttTnavshJlD03B6fbrX",
-        project_name="april-goal-transformer",
+        api_key="",
+        project_name="goal-transformer",
         experiment_name=params['model_name'],
     )
     checkpoint_callback = ModelCheckpoint(filename=params['model_name'] + "{epoch:03d}", every_n_epochs=1)
