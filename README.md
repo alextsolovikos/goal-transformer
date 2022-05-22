@@ -1,4 +1,6 @@
-# Goal Transformer: Dynamics-Aware Motion Prediction using Multidimensional Transformers and Gaussian Processes
+# Goal Transformer
+
+Alex Tsolovikos and Efstathios Bakolas, *Goal Transformer: Dynamics-Aware Motion Prediction using Multidimensional Transformers and Gaussian Processes*.
 
 This work was done at *The University of Texas at Austin, Department of Aerospace Engineering*.
 
