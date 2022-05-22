@@ -87,4 +87,4 @@ python main.py --config config/goal_transformer_Q32D256Ng3.yaml --train
 This work was supported by the National Science Foundation under grant 1924790. Computing resources were provided by the Texas Advanced Computing Center. Alexandros Tsolovikos is supported in part by the A. Onassis Foundation Scholarship.
 
 ## Contribute to this Project
-Feel free to contribute to this project. For questions, comments, and suggestions, contact me at <atsolovikos@gmail.com>
+Feel free to contribute to this project. For questions, comments, and suggestions, contact me at <atsolovikos@gmail.com>.
