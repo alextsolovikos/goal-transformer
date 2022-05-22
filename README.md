@@ -69,7 +69,13 @@ python main.py --config config/goal_transformer_Q32D256Ng3.yaml --train
 
 
 ## Sample Predictions
-<img src="figures/sample_prediction_1.png" width="400" />
 
-
+<p float="left">
+  <img src="figures/sample_prediction_1.png" width="500" />
+  <img src="figures/sample_prediction_2.png" width="500" />
+</p>
+<p float="left">
+  <img src="figures/sample_prediction_3.png" width="500" />
+  <img src="figures/sample_prediction_4.png" width="500" />
+</p>
 
