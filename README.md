@@ -73,12 +73,12 @@ python main.py --config config/goal_transformer_Q32D256Ng3.yaml --train
 ## Sample Predictions
 
 <p float="left">
-  <img src="figures/sample_prediction_1.png" width="600" />
-  <img src="figures/sample_prediction_2.png" width="600" />
+  <img src="figures/sample_prediction_1.png" width="400" />
+  <img src="figures/sample_prediction_2.png" width="400" />
 </p>
 <p float="left">
-  <img src="figures/sample_prediction_3.png" width="600" />
-  <img src="figures/sample_prediction_4.png" width="600" />
+  <img src="figures/sample_prediction_3.png" width="400" />
+  <img src="figures/sample_prediction_4.png" width="400" />
 </p>
 
 ## Funding
