@@ -65,10 +65,11 @@ python main.py --config config/goal_transformer_Q32D256Ng3.yaml --train
 
 ## Model Architecture
 
-  <img src="figures/model_sketch.png" width="600" />
+<img src="figures/model_sketch.png" width="600" />
 
 
-
+## Sample Predictions
+<img src="figures/sample_prediction_1.png" width="400" />
 
 
 
